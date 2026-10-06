@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RRB ALP 2026 | ALP Study Hub</title>
+
+<meta name="description"
+content="RRB ALP 2026 preparation platform - CBT 1, CBT 2, Electrician Trade, PYQ and Quick Revision.">
+
+<style>
+
+/* =========================================================
+   CYAN + NEON GREEN PREMIUM THEME
+========================================================= */
+
+:root{
+    --cyan:#00e5ff;
+    --cyan-light:#67f5ff;
+    --green:#00e676;
+    --green-light:#63ffae;
+    --aqua:#00ffc8;
+
+    --bg:#03070b;
+    --bg2:#061016;
+
+    --white:#f4ffff;
+    --text:#d8e9ec;
+    --muted:#81959b;
+
+    --cyan-border:rgba(0,229,255,.16);
+    --green-border:rgba(0,230,118,.16);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    font-family:
+        "Segoe UI",
+        "Noto Sans Devanagari",
+        Arial,
+        sans-serif;
+
+    color:var(--white);
+
+    background:
+
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(0,229,255,.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 100% 15%,
+            rgba(0,230,118,.09),
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(0,255,200,.05),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #020508 0%,
+            #061017 45%,
+            #020608 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-1;
+
+    pointer-events:none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,229,255,.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0,229,255,.018) 1px,
+            transparent 1px
+        );
+
+    background-size:45px 45px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    height:72px;
+
+    padding:0 5%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(2,7,10,.96),
+            rgba(5,16,22,.90),
+            rgba(2,7,10,.96)
+        );
+
+    backdrop-filter:blur(22px);
+
+    border-bottom:
+        1px solid
+        rgba(0,229,255,.12);
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.38);
+}
+
+
+/* Animated cyan-green line */
+
+.navbar::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-1px;
+
+    left:0;
+    right:0;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--aqua),
+            var(--green),
+            var(--aqua),
+            var(--cyan)
+        );
+
+    background-size:200% 100%;
+
+    animation:
+        lineMove 5s linear infinite;
+}
+
+
+@keyframes lineMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    100%{
+        background-position:200% 50%;
+    }
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:white;
+}
+
+
+.logo{
+
+    width:44px;
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    font-size:22px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(0,229,255,.20),
+            rgba(0,230,118,.20)
+        );
+
+    border:
+        1px solid
+        rgba(0,229,255,.35);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(0,229,255,.16),
+
+        inset 0 1px
+        rgba(255,255,255,.12);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+.logo::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:2px;
+
+    left:-80px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--cyan),
+            var(--green),
+            transparent
+        );
+
+    transform:rotate(-45deg);
+
+    animation:
+        logoScan 4s infinite;
+}
+
+
+@keyframes logoScan{
+
+    0%,55%{
+        left:-80px;
+    }
+
+    100%{
+        left:80px;
+    }
+}
+
+
+.brand-text{
+    line-height:1.05;
+}
+
+
+.brand-text strong{
+
+    display:block;
+
+    font-size:17px;
+
+    letter-spacing:1.7px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--aqua),
+            var(--green)
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+
+.brand-text span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#71858b;
+
+    font-size:9px;
+
+    letter-spacing:2.5px;
+}
+
+
+/* =========================================================
+   SYLLABUS BUTTON
+========================================================= */
+
+.nav-btn{
+
+    text-decoration:none;
+
+    color:#dfffff;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.7px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(0,229,255,.08),
+            rgba(0,230,118,.07)
+        );
+
+    border:
+        1px solid
+        rgba(0,229,255,.20);
+
+    transition:.25s;
+}
+
+
+.nav-btn:hover{
+
+    transform:translateY(-2px);
+
+    color:white;
+
+    border-color:
+        rgba(0,229,255,.55);
+
+    box-shadow:
+        0 0 30px
+        rgba(0,229,255,.14);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+
+    width:min(1180px,92%);
+
+    margin:auto;
+
+    padding:60px 0 70px;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header{
+
+    margin-bottom:25px;
+}
+
+
+.dashboard-header small{
+
+    display:inline-block;
+
+    margin-bottom:8px;
+
+    color:var(--cyan);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+
+.dashboard-header h1{
+
+    font-size:34px;
+
+    line-height:1.15;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffffff,
+            var(--cyan),
+            var(--aqua),
+            var(--green)
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+
+.dashboard-header p{
+
+    margin-top:9px;
+
+    color:#71858b;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   STUDY GRID
+========================================================= */
+
+.study-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+}
+
+
+/* =========================================================
+   PREMIUM STUDY CARD
+========================================================= */
+
+.study-card{
+
+    min-height:185px;
+
+    position:relative;
+
+    padding:21px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(10,26,33,.94),
+            rgba(4,12,17,.97)
+        );
+
+    border:
+        1px solid
+        rgba(0,229,255,.12);
+
+    box-shadow:
+
+        0 14px 38px
+        rgba(0,0,0,.30),
+
+        inset 0 1px
+        rgba(255,255,255,.05);
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+/* Cyan-Green top line */
+
+.study-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    top:0;
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--aqua),
+            var(--green)
+        );
+}
+
+
+/* Glow */
+
+.study-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-75px;
+    bottom:-75px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(0,229,255,.14),
+            rgba(0,230,118,.07),
+            transparent 70%
+        );
+
+    filter:blur(12px);
+
+    transition:.35s;
+}
+
+
+.study-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(0,229,255,.40);
+
+    box-shadow:
+
+        0 25px 55px
+        rgba(0,0,0,.44),
+
+        0 0 35px
+        rgba(0,229,255,.08),
+
+        0 0 35px
+        rgba(0,230,118,.06);
+}
+
+
+.study-card:hover::after{
+
+    transform:scale(1.5);
+
+    opacity:1;
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.card-icon{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    font-size:22px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(0,229,255,.11),
+            rgba(0,230,118,.11)
+        );
+
+    border:
+        1px solid
+        rgba(0,229,255,.20);
+
+    box-shadow:
+
+        0 0 22px
+        rgba(0,229,255,.07),
+
+        inset 0 1px
+        rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+
+.study-card:hover .card-icon{
+
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+
+    border-color:
+        rgba(0,229,255,.42);
+
+    box-shadow:
+
+        0 0 27px
+        rgba(0,229,255,.17);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.study-card h3{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:17px;
+
+    font-size:16px;
+
+    color:#efffff;
+}
+
+
+.study-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:7px;
+
+    color:#72858b;
+
+    font-size:11px;
+
+    line-height:1.55;
+}
+
+
+.arrow{
+
+    position:absolute;
+
+    right:18px;
+    top:20px;
+
+    z-index:3;
+
+    color:var(--cyan);
+
+    font-size:23px;
+
+    transition:.3s;
+}
+
+
+.study-card:hover .arrow{
+
+    transform:
+        translateX(5px);
+
+    color:var(--green);
+}
+
+
+/* =========================================================
+   CARD NUMBER / SMALL ACCENT
+========================================================= */
+
+.study-card:nth-child(1){
+    --accent:var(--cyan);
+}
+
+.study-card:nth-child(2){
+    --accent:#18edcf;
+}
+
+.study-card:nth-child(3){
+    --accent:var(--green);
+}
+
+.study-card:nth-child(4){
+    --accent:#00f0b0;
+}
+
+.study-card:nth-child(5){
+    --accent:var(--cyan);
+}
+
+
+.study-card .card-icon{
+
+    color:var(--accent);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--accent) 25%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .study-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:600px){
+
+    .navbar{
+
+        height:64px;
+
+        padding:0 4%;
+    }
+
+
+    .logo{
+
+        width:40px;
+        height:40px;
+
+        font-size:20px;
+    }
+
+
+    .brand-text strong{
+
+        font-size:14px;
+    }
+
+
+    .brand-text span{
+
+        font-size:7px;
+
+        letter-spacing:1.5px;
+    }
+
+
+    .nav-btn{
+
+        padding:8px 10px;
+
+        font-size:8px;
+    }
+
+
+    main{
+
+        width:92%;
+
+        padding:42px 0 55px;
+    }
+
+
+    .dashboard-header h1{
+
+        font-size:28px;
+    }
+
+
+    .dashboard-header p{
+
+        font-size:11px;
+    }
+
+
+    .study-grid{
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:10px;
+    }
+
+
+    .study-card{
+
+        min-height:165px;
+
+        padding:16px;
+    }
+
+
+    .card-icon{
+
+        width:43px;
+        height:43px;
+
+        font-size:20px;
+    }
+
+
+    .study-card h3{
+
+        margin-top:14px;
+
+        font-size:13px;
+    }
+
+
+    .study-card p{
+
+        font-size:10px;
+
+        line-height:1.5;
+    }
+
+
+    .arrow{
+
+        right:13px;
+        top:16px;
+
+        font-size:20px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .study-grid{
+
+        gap:8px;
+    }
+
+
+    .study-card{
+
+        min-height:155px;
+
+        padding:14px;
+    }
+
+
+    .study-card h3{
+
+        font-size:12px;
+    }
+
+
+    .study-card p{
+
+        font-size:9px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <!-- APNA LOGO YAHAN LAGAYE -->
+        <div class="logo">⚡</div>
+
+        <div class="brand-text">
+
+            <strong>
+                STUDY HUB
+            </strong>
+
+            <span>
+                RRB • 2026 PREPARATION
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <a href="syllabus.html" class="nav-btn">
+        OFFICIAL SYLLABUS →
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     ONLY STUDY DASHBOARD
+===================================================== -->
+
+<main>
+
+
+    <div class="dashboard-header">
+
+        <small>
+            RRB ALP 2026 • PREPARATION COMMAND CENTER
+        </small>
+
+        <h1>
+            STUDY DASHBOARD
+        </h1>
+
+        <p>
+            RRB ALP की तैयारी के सभी प्रमुख sections एक ही जगह।
+        </p>
+
+    </div>
+
+
+    <div class="study-grid">
+
+
+        <!-- CBT 1 -->
+
+        <a href="cbt1.html" class="study-card">
+
+            <div class="card-icon">
+                🧠
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+            <h3>
+                CBT-1 Preparation
+            </h3>
+
+            <p>
+                Mathematics, Reasoning, General Science और General Awareness की तैयारी।
+            </p>
+
+        </a>
+
+
+
+        <!-- CBT 2 -->
+
+        <a href="cbt2.html" class="study-card">
+
+            <div class="card-icon">
+                ⚙️
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+            <h3>
+                CBT-2 Preparation
+            </h3>
+
+            <p>
+                Part-A और Part-B के लिए structured preparation और practice।
+            </p>
+
+        </a>
+
+
+
+        <!-- ELECTRICIAN -->
+
+        <a href="electrician.html" class="study-card">
+
+            <div class="card-icon">
+                ⚡
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+            <h3>
+                Electrician Trade
+            </h3>
+
+            <p>
+                ITI Electrician theory, formulas, concepts और trade MCQs।
+            </p>
+
+        </a>
+
+
+
+        <!-- PYQ -->
+
+        <a href="alp-pyq.html" class="study-card">
+
+            <div class="card-icon">
+                📚
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+            <h3>
+                ALP PYQ
+            </h3>
+
+            <p>
+                Previous Year Questions से वास्तविक exam pattern की practice।
+            </p>
+
+        </a>
+
+
+
+        <!-- REVISION -->
+
+        <a href="revision.html" class="study-card">
+
+            <div class="card-icon">
+                🔁
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+            <h3>
+                Quick Revision
+            </h3>
+
+            <p>
+                Important concepts और formulas का rapid revision।
+            </p>
+
+        </a>
+
+
+    </div>
+
+</main>
+
+
+</body>
+</html>
