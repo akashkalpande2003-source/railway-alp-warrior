@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RRB ALP Part-B | Chapter 1 Safety Notes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Patrick+Hand&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#fffef8;
+  --ink:#173b83;
+  --heading:#bd2448;
+  --green:#167849;
+  --purple:#7743a6;
+  --text:#202b40;
+  --line:#d9e6ff;
+  --margin:#ef8a9c;
+  --card:#ffffff;
+  --yellow:#fff1a8;
+  --bluebox:#eaf2ff;
+  --border:#c6d5ef;
+  --shadow:0 4px 15px #18315b12;
+}
+
+body.dark{
+  --paper:#151b27;
+  --ink:#b9d1ff;
+  --heading:#ff91a9;
+  --green:#7be0ad;
+  --purple:#d0a3ff;
+  --text:#e6eaf4;
+  --line:#29384d;
+  --margin:#a34b63;
+  --card:#1d2636;
+  --yellow:#4c4324;
+  --bluebox:#202e45;
+  --border:#38465c;
+  --shadow:0 4px 15px #0003;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#e9edf4;
+  color:var(--text);
+  font-family:'Kalam','Noto Sans Devanagari',cursive;
+  font-size:17px;
+  line-height:1.8;
+}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#172d57;
+  color:white;
+  padding:10px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  box-shadow:0 3px 12px #0002;
+}
+
+.brand{
+  font-family:'Patrick Hand','Kalam',cursive;
+  font-size:21px;
+  font-weight:bold;
+}
+
+.actions{
+  display:flex;
+  gap:7px;
+  align-items:center;
+}
+
+.btn{
+  border:1px solid #ffffff50;
+  border-radius:9px;
+  background:#ffffff18;
+  color:white;
+  padding:7px 11px;
+  font-family:inherit;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.btn:hover{background:#ffffff30}
+
+.page{
+  max-width:920px;
+  margin:20px auto;
+  background:var(--paper);
+  min-height:100vh;
+  box-shadow:var(--shadow);
+  position:relative;
+  padding:25px 24px 40px 48px;
+  overflow:hidden;
+  background-image:repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 35px,
+    var(--line) 36px
+  );
+}
+
+/* Notebook margin */
+.page:before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:33px;
+  width:2px;
+  background:var(--margin);
+  opacity:.8;
+}
+
+.cover{
+  text-align:center;
+  padding:14px 5px 22px;
+  border:2px solid var(--heading);
+  border-radius:12px;
+  margin-bottom:22px;
+  background:var(--card);
+  position:relative;
+}
+
+.cover h1{
+  font-size:clamp(27px,5vw,39px);
+  line-height:1.4;
+  color:var(--heading);
+  margin:0 0 5px;
+  text-decoration:underline;
+  text-decoration-style:wavy;
+  text-underline-offset:6px;
+}
+
+.cover p{
+  margin:4px 0;
+  color:var(--ink);
+}
+
+.badge{
+  display:inline-block;
+  background:var(--yellow);
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:bold;
+  margin-top:8px;
+}
+
+h2{
+  color:var(--heading);
+  font-size:25px;
+  line-height:1.5;
+  margin:28px 0 12px;
+  border-bottom:2px dashed var(--heading);
+  padding-bottom:4px;
+}
+
+h3{
+  color:var(--green);
+  font-size:21px;
+  line-height:1.5;
+  margin:18px 0 8px;
+}
+
+p{margin:8px 0}
+
+strong{color:var(--heading)}
+
+.english{
+  font-family:'Patrick Hand','Kalam',cursive;
+  color:var(--purple);
+  font-size:1.02em;
+}
+
+.highlight{
+  background:linear-gradient(transparent 45%,var(--yellow) 45%);
+  padding:0 3px;
+  font-weight:bold;
+}
+
+.note{
+  padding:10px 13px;
+  border-left:4px solid var(--green);
+  background:var(--card);
+  border-radius:0 10px 10px 0;
+  margin:12px 0;
+  box-shadow:var(--shadow);
+}
+
+.warning{
+  border-left-color:#e34b4b;
+  background:var(--card);
+}
+
+.exam{
+  border:2px dashed var(--purple);
+  border-radius:12px;
+  background:var(--card);
+  padding:13px;
+  margin:18px 0;
+}
+
+.exam-title{
+  color:var(--purple);
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.question{
+  border-bottom:1px dashed var(--border);
+  padding:10px 0;
+}
+
+.question:last-child{border-bottom:0}
+
+.options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5px 12px;
+  margin:6px 0;
+  font-family:'Noto Sans Devanagari',sans-serif;
+  font-size:14px;
+}
+
+.answer{
+  color:var(--green);
+  font-weight:bold;
+  font-size:15px;
+}
+
+.reveal{
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:5px 10px;
+  background:var(--bluebox);
+  color:var(--ink);
+  font-family:inherit;
+  cursor:pointer;
+  margin-top:4px;
+}
+
+.diagram{
+  background:var(--card);
+  border:2px dashed #9aa9c4;
+  border-radius:12px;
+  padding:14px;
+  margin:15px 0;
+  text-align:center;
+}
+
+.diagram-label{
+  font-size:17px;
+  font-weight:bold;
+  color:var(--purple);
+}
+
+.diagram small{
+  display:block;
+  color:var(--text);
+  opacity:.8;
+}
+
+.diagram img{
+  max-width:100%;
+  max-height:360px;
+  object-fit:contain;
+  display:block;
+  margin:12px auto;
+  border-radius:8px;
+}
+
+.upload-btn{
+  display:inline-block;
+  background:var(--bluebox);
+  color:var(--ink);
+  border:1px solid var(--border);
+  padding:5px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+.diagram input{display:none}
+
+.table-wrap{width:100%;}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+  background:var(--card);
+  font-size:15px;
+  line-height:1.6;
+  margin:12px 0;
+}
+
+th,td{
+  border:1px solid var(--border);
+  padding:7px 6px;
+  overflow-wrap:anywhere;
+  vertical-align:top;
+  text-align:left;
+}
+
+th{
+  background:var(--bluebox);
+  color:var(--ink);
+  font-weight:bold;
+}
+
+ul,ol{padding-left:24px}
+li{padding-left:2px;margin:3px 0}
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.mini-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:11px;
+  padding:10px 12px;
+  box-shadow:var(--shadow);
+}
+
+.mini-card h3{margin-top:0}
+
+.memory{
+  background:var(--yellow);
+  color:var(--text);
+  border-radius:10px;
+  padding:10px 13px;
+  margin:12px 0;
+  border:1px dashed #d2a638;
+}
+
+.footer{
+  margin-top:35px;
+  border-top:2px dashed var(--heading);
+  padding-top:12px;
+  text-align:center;
+  color:var(--purple);
+  font-weight:bold;
+}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .topbar{padding:8px 10px}
+  .brand{font-size:18px}
+  .btn{padding:6px 8px;font-size:12px}
+  .page{
+    margin:0;
+    padding:16px 12px 30px 28px;
+    width:100%;
+    box-shadow:none;
+  }
+  .page:before{left:17px}
+  .cover{padding:12px 7px}
+  h2{font-size:22px}
+  h3{font-size:19px}
+  .two-col{grid-template-columns:1fr}
+  .options{grid-template-columns:1fr}
+  table{font-size:13px}
+  th,td{padding:5px 4px}
+}
+
+@media print{
+  body{background:white;color:#222}
+  .topbar,.upload-btn,.reveal{display:none!important}
+  .page{
+    margin:0;
+    max-width:none;
+    box-shadow:none;
+    background:white;
+    color:#222;
+  }
+  .page:before{background:#e77}
+  .diagram{break-inside:avoid}
+  h2,h3{break-after:avoid}
+  .exam,.note,.mini-card{break-inside:avoid}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="brand">✍ Railway Warrior Notes</div>
+  <div class="actions">
+    <button class="btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
+    <button class="btn" onclick="window.print()">🖨 Print</button>
+  </div>
+</div>
+
+<main class="page">
+
+<header class="cover">
+  <h1>व्यावसायिक सुरक्षा एवं स्वास्थ्य</h1>
+  <p class="english">Occupational Safety & Health</p>
+  <p><b>RRB ALP CBT-2 • PART-B • ELECTRICIAN</b></p>
+  <span class="badge">CHAPTER 01</span>
+</header>
+
+<!-- SECTION 1 -->
+<section>
+<h2>1. सुरक्षा का परिचय एवं दुर्घटना के कारण</h2>
+<p class="english">Introduction & Causes of Accidents</p>
+
+<p>औद्योगिक कार्यशाला में सुरक्षा केवल अपनी नहीं, बल्कि मशीनों, सहकर्मियों और संस्थान की भी होती है।</p>
+
+<div class="note">
+<strong>दुर्घटना (Accident):</strong>
+एक <span class="highlight">अनियोजित, अनियंत्रित और अवांछित घटना</span>
+जिसके कारण चोट या संपत्ति का नुकसान हो सकता है।
+</div>
+
+<h3>दुर्घटना के मुख्य कारण</h3>
+<ol>
+<li><strong>अज्ञानता (Ignorance):</strong> मशीन या टूल्स चलाने की सही जानकारी न होना।</li>
+<li><strong>अत्यधिक उत्सुकता (Over-curiosity):</strong> बिना जानकारी के मशीन चालू करना।</li>
+<li><strong>असावधानी (Carelessness):</strong> ध्यान भटकना या सुरक्षा नियमों को अनदेखा करना।</li>
+<li><strong>असुरक्षित पहनावा (Unsafe Apparel):</strong> ढीले कपड़े, टाई, मफलर, अंगूठी या खुले बाल।</li>
+<li><strong>गलत औजार (Incorrect Tools):</strong> गलत या खराब औजार का उपयोग।</li>
+<li><strong>खराब हाउसकीपिंग (Poor Housekeeping):</strong> फर्श पर तेल, ग्रीस या धातु के टुकड़े बिखरे होना।</li>
+</ol>
+
+<div class="memory">🧠 याद रखें: साफ कार्यस्थल + सही औजार + सही जानकारी = दुर्घटना का कम जोखिम।</div>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+
+<div class="question">
+<b>Q1. दुर्घटना का मुख्य लक्षण क्या है?</b>
+<div class="options">
+<span>A. पूर्व-नियोजित घटना</span><span>B. अनियोजित घटना</span>
+<span>C. नियमित कार्य</span><span>D. प्रशिक्षण</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — अनियोजित घटना।</div>
+</div>
+
+<div class="question">
+<b>Q2. कार्यस्थल पर तेल या ग्रीस फैलने से क्या बढ़ता है?</b>
+<div class="options">
+<span>A. सुरक्षा</span><span>B. फिसलने का खतरा</span>
+<span>C. रोशनी</span><span>D. कार्यक्षमता</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — फिसलने का खतरा।</div>
+</div>
+
+<div class="question">
+<b>Q3. मशीन पर काम करते समय कौन-सा पहनावा असुरक्षित है?</b>
+<div class="options">
+<span>A. फिटिंग वाले कपड़े</span><span>B. सुरक्षा जूते</span>
+<span>C. ढीले कपड़े और खुली टाई</span><span>D. उपयुक्त PPE</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: C — ढीले कपड़े और खुली टाई।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 2 -->
+<section>
+<h2>2. विद्युत झटका — कारण, प्रभाव एवं सुरक्षा</h2>
+<p class="english">Electric Shock</p>
+
+<p>जब विद्युत धारा मानव शरीर से होकर गुजरती है, तो विद्युत झटका लग सकता है। प्रभाव धारा, संपर्क की अवधि, शरीर के रास्ते और त्वचा की स्थिति पर निर्भर करता है।</p>
+
+<div class="note warning">
+<strong>⚠️ सबसे जरूरी नियम:</strong>
+विद्युत झटका लगे व्यक्ति को सीधे न छुएँ। पहले सुरक्षित तरीके से सप्लाई बंद करें। यदि सप्लाई बंद नहीं कर सकते, तो दूरी बनाएँ और आपातकालीन सहायता बुलाएँ।
+</div>
+
+<h3>करंट का शरीर पर प्रभाव</h3>
+<table>
+<thead><tr><th>धारा का मान</th><th>संभावित प्रभाव</th></tr></thead>
+<tbody>
+<tr><td>लगभग 1 mA</td><td>झनझनाहट महसूस हो सकती है।</td></tr>
+<tr><td>लगभग 5 mA</td><td>हल्का झटका महसूस हो सकता है।</td></tr>
+<tr><td>10–20 mA</td><td>मांसपेशियों में तेज संकुचन; व्यक्ति के लिए तार छोड़ना कठिन हो सकता है।</td></tr>
+<tr><td>50–100 mA</td><td>गंभीर श्वसन या हृदय संबंधी खतरा हो सकता है।</td></tr>
+<tr><td>100 mA से अधिक</td><td>गंभीर चोट, जलना या मृत्यु का जोखिम।</td></tr>
+</tbody>
+</table>
+
+<p><b>ध्यान दें:</b> ये अनुमानित उदाहरण हैं, सुरक्षित/असुरक्षित की निश्चित सीमा नहीं। कम धारा भी परिस्थितियों के अनुसार जानलेवा हो सकती है।</p>
+
+<h3>मानव शरीर का प्रतिरोध</h3>
+<ul>
+<li><strong>सूखी त्वचा:</strong> प्रतिरोध सामान्यतः अधिक होता है।</li>
+<li><strong>गीली या पसीने वाली त्वचा:</strong> प्रतिरोध घट सकता है और करंट बढ़ सकता है।</li>
+<li><strong>आंतरिक शरीर:</strong> त्वचा की तुलना में प्रतिरोध कम होता है।</li>
+</ul>
+
+<div class="diagram">
+<div class="diagram-label">✏️ DIAGRAM 01 — विद्युत झटके का मार्ग</div>
+<small>यहाँ बाद में शरीर, लाइव वायर और अर्थ का चित्र लगाएँ।</small>
+<label class="upload-btn">📷 चित्र चुनें<input type="file" accept="image/*" onchange="previewDiagram(this)"></label>
+</div>
+
+<h3>विद्युत झटका लगने पर प्राथमिक कदम</h3>
+<ol>
+<li>मुख्य स्विच या सप्लाई को सुरक्षित रूप से बंद करें।</li>
+<li>पीड़ित को सीधे न छुएँ; विद्युत खतरा समाप्त होने तक दूरी बनाएँ।</li>
+<li>आपातकालीन सहायता बुलाएँ।</li>
+<li>सुरक्षित होने पर सांस और प्रतिक्रिया जाँचें। सामान्य सांस न हो तो प्रशिक्षित व्यक्ति CPR/AED निर्देशों के अनुसार तुरंत सहायता शुरू करे।</li>
+</ol>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+
+<div class="question">
+<b>Q1. विद्युत झटका लगने पर सबसे पहला कदम क्या है?</b>
+<div class="options">
+<span>A. व्यक्ति को खींचना</span><span>B. सप्लाई सुरक्षित रूप से बंद करना</span>
+<span>C. पानी डालना</span><span>D. व्यक्ति को दौड़ाना</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — सप्लाई सुरक्षित रूप से बंद करना।</div>
+</div>
+
+<div class="question">
+<b>Q2. गीली त्वचा में विद्युत खतरा क्यों बढ़ सकता है?</b>
+<div class="options">
+<span>A. प्रतिरोध बढ़ता है</span><span>B. प्रतिरोध घट सकता है</span>
+<span>C. वोल्टेज हमेशा शून्य होता है</span><span>D. करंट नहीं बहता</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — प्रतिरोध घट सकता है।</div>
+</div>
+
+<div class="question">
+<b>Q3. विद्युत दुर्घटना में पीड़ित को सीधे छूना क्यों खतरनाक है?</b>
+<div class="options">
+<span>A. शरीर ठंडा होता है</span><span>B. बचाव करने वाला भी करंट की चपेट में आ सकता है</span>
+<span>C. बिजली बंद हो जाती है</span><span>D. कोई खतरा नहीं</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — बचाव करने वाला भी करंट की चपेट में आ सकता है।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 3 -->
+<section>
+<h2>3. कृत्रिम श्वसन एवं प्राथमिक उपचार</h2>
+<p class="english">Artificial Respiration & First Aid</p>
+
+<div class="note warning">
+<strong>⚠️ आधुनिक प्राथमिक उपचार:</strong>
+Sylvester और Shafer जैसी पुरानी विधियाँ ऐतिहासिक/पाठ्यक्रम जानकारी के लिए पढ़ें। वास्तविक आपातकाल में प्रशिक्षित CPR, AED और स्थानीय आपातकालीन निर्देशों का पालन करें। सांस न ले रहे व्यक्ति को केवल पुरानी विधियों के भरोसे न छोड़ें।
+</div>
+
+<h3>1. सिल्वेस्टर विधि (Sylvester's Method)</h3>
+<ul>
+<li>यह कृत्रिम श्वसन की पारंपरिक विधियों में से एक है।</li>
+<li>पुरानी पुस्तकों में हाथों की गति से छाती का विस्तार कराने की प्रक्रिया बताई जाती है।</li>
+<li>आधुनिक आपातकाल में प्रशिक्षित CPR को प्राथमिकता दें।</li>
+</ul>
+
+<h3>2. शेफर विधि (Shafer's Method)</h3>
+<ul>
+<li>यह भी कृत्रिम श्वसन की पुरानी विधि है।</li>
+<li>इसमें पारंपरिक रूप से पेट के बल स्थिति में पीठ के निचले भाग पर दबाव दिया जाता था।</li>
+</ul>
+
+<h3>3. मुँह से मुँह / मुँह से नाक</h3>
+<ul>
+<li>रेस्क्यू ब्रीदिंग केवल उपयुक्त प्रशिक्षण और सुरक्षित परिस्थितियों में करें।</li>
+<li>यदि व्यक्ति सामान्य सांस नहीं ले रहा है, तो आपातकालीन सहायता बुलाएँ और CPR/AED के निर्देशों का पालन करें।</li>
+</ul>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+<div class="question">
+<b>Q1. Sylvester और Shafer विधियाँ किससे संबंधित हैं?</b>
+<div class="options">
+<span>A. आग बुझाने से</span><span>B. पारंपरिक कृत्रिम श्वसन से</span>
+<span>C. मापन से</span><span>D. वेल्डिंग से</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — पारंपरिक कृत्रिम श्वसन से।</div>
+</div>
+<div class="question">
+<b>Q2. कोई व्यक्ति सामान्य सांस नहीं ले रहा हो तो क्या करना चाहिए?</b>
+<div class="options">
+<span>A. उसे अकेला छोड़ना</span><span>B. आपातकालीन सहायता बुलाकर CPR/AED निर्देशों का पालन करना</span>
+<span>C. पानी पिलाना</span><span>D. खड़ा करना</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — आपातकालीन सहायता और CPR/AED निर्देश।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 4 -->
+<section>
+<h2>4. आग, वर्गीकरण एवं अग्निशामक</h2>
+<p class="english">Fire & Fire Extinguishers</p>
+
+<p>आग के लिए सामान्यतः तीन तत्व आवश्यक होते हैं। इन्हें <strong>Fire Triangle</strong> कहा जाता है।</p>
+
+<div class="diagram">
+<div class="diagram-label">✏️ DIAGRAM 02 — Fire Triangle</div>
+<small>चित्र: Fuel + Heat + Oxygen का त्रिकोण</small>
+<label class="upload-btn">📷 चित्र चुनें<input type="file" accept="image/*" onchange="previewDiagram(this)"></label>
+</div>
+
+<div class="two-col">
+<div class="mini-card"><h3>🔥 Fuel</h3>ईंधन — लकड़ी, पेट्रोल, गैस आदि।</div>
+<div class="mini-card"><h3>🌡️ Heat</h3>ऊष्मा — आग शुरू करने के लिए आवश्यक गर्मी।</div>
+<div class="mini-card"><h3>💨 Oxygen</h3>ऑक्सीजन — दहन को बनाए रखने में सहायता करती है।</div>
+<div class="mini-card"><h3>🧯 उद्देश्य</h3>इनमें से किसी एक तत्व को हटाकर आग नियंत्रित करना।</div>
+</div>
+
+<h3>आग बुझाने की तीन विधियाँ</h3>
+<ul>
+<li><strong>Starving:</strong> ईंधन की आपूर्ति हटाना।</li>
+<li><strong>Smothering:</strong> ऑक्सीजन की आपूर्ति रोकना।</li>
+<li><strong>Cooling:</strong> तापमान कम करना।</li>
+</ul>
+
+<h3>आग की श्रेणियाँ — परीक्षा के लिए</h3>
+<table>
+<thead>
+<tr><th>श्रेणी</th><th>आग का प्रकार</th><th>सामान्य जानकारी</th></tr>
+</thead>
+<tbody>
+<tr><td>Class A</td><td>लकड़ी, कागज, कपड़ा जैसे ठोस पदार्थ</td><td>उपयुक्त जल-आधारित या अन्य अनुमोदित यंत्र।</td></tr>
+<tr><td>Class B</td><td>पेट्रोल, डीजल, पेंट जैसे ज्वलनशील तरल</td><td>फोम, CO₂ या उपयुक्त ड्राई पाउडर।</td></tr>
+<tr><td>Class C</td><td>ज्वलनशील गैसें — वर्गीकरण मानक के अनुसार</td><td>गैस की आपूर्ति सुरक्षित रूप से बंद करना महत्वपूर्ण।</td></tr>
+<tr><td>Class D</td><td>विशिष्ट ज्वलनशील धातुएँ</td><td>धातु के प्रकार के लिए अनुमोदित विशेष एजेंट।</td></tr>
+<tr><td>Electrical</td><td>विद्युत उपकरण में लगी आग</td><td>पहले सप्लाई अलग करें, यदि सुरक्षित हो; उपयुक्त गैर-चालक एजेंट का प्रयोग करें।</td></tr>
+</tbody>
+</table>
+
+<div class="note warning">
+<strong>महत्वपूर्ण:</strong> विद्युत उपकरण पर पानी या सामान्य फोम का प्रयोग न करें जब तक बिजली अलग होने और यंत्र की उपयुक्तता की पुष्टि न हो। आग का वर्गीकरण और सिलेंडर के रंग अलग-अलग मानकों में भिन्न हो सकते हैं। परीक्षा में अपनी निर्धारित NIMI/DGT पुस्तक का वर्गीकरण पढ़ें।
+</div>
+
+<h3>अग्निशामक के रंग — पारंपरिक पहचान</h3>
+<table>
+<thead><tr><th>प्रकार</th><th>पारंपरिक पहचान</th></tr></thead>
+<tbody>
+<tr><td>Water</td><td>लाल</td></tr>
+<tr><td>Foam</td><td>क्रीम रंग की पट्टी — कुछ पारंपरिक प्रणालियों में</td></tr>
+<tr><td>DCP</td><td>नीली पट्टी — कुछ पारंपरिक प्रणालियों में</td></tr>
+<tr><td>CO₂</td><td>काली पट्टी — कुछ पारंपरिक प्रणालियों में</td></tr>
+</tbody>
+</table>
+<p><small>वास्तविक उपयोग में सिलेंडर के रंग के बजाय लेबल, आग के प्रकार और निर्माता के निर्देश देखें।</small></p>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+
+<div class="question">
+<b>Q1. Fire Triangle में कौन-से तत्व शामिल हैं?</b>
+<div class="options">
+<span>A. ईंधन, ऊष्मा, ऑक्सीजन</span><span>B. पानी, मिट्टी, हवा</span>
+<span>C. धातु, लकड़ी, पानी</span><span>D. धुआँ, राख, पानी</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — ईंधन, ऊष्मा और ऑक्सीजन।</div>
+</div>
+
+<div class="question">
+<b>Q2. Starving विधि में क्या किया जाता है?</b>
+<div class="options">
+<span>A. ईंधन हटाया जाता है</span><span>B. ऑक्सीजन बढ़ाई जाती है</span>
+<span>C. तापमान बढ़ाया जाता है</span><span>D. बिजली चालू की जाती है</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — ईंधन हटाया जाता है।</div>
+</div>
+
+<div class="question">
+<b>Q3. ज्वलनशील तरल की आग किस श्रेणी में आती है?</b>
+<div class="options">
+<span>A. Class A</span><span>B. Class B</span>
+<span>C. Class D</span><span>D. केवल Electrical</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — Class B।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 5 -->
+<section>
+<h2>5. 5S संकल्पना</h2>
+<p class="english">Detailed 5S Concept</p>
+
+<p>5S कार्यस्थल को व्यवस्थित, स्वच्छ और सुरक्षित रखने की एक प्रणाली है।</p>
+
+<table>
+<thead><tr><th>क्रम</th><th>जापानी शब्द</th><th>अर्थ एवं कार्य</th></tr></thead>
+<tbody>
+<tr><td>1S</td><td>Seiri — Sort</td><td>अनावश्यक वस्तुओं को हटाना; Red Tag का उपयोग।</td></tr>
+<tr><td>2S</td><td>Seiton — Set in Order</td><td>औजारों को तय स्थान पर रखना; Shadow Board।</td></tr>
+<tr><td>3S</td><td>Seiso — Shine</td><td>मशीन और कार्यस्थल की सफाई।</td></tr>
+<tr><td>4S</td><td>Seiketsu — Standardize</td><td>चेकलिस्ट, नियम और रंग कोडिंग बनाना।</td></tr>
+<tr><td>5S</td><td>Shitsuke — Sustain</td><td>अनुशासन द्वारा व्यवस्था बनाए रखना।</td></tr>
+</tbody>
+</table>
+
+<div class="diagram">
+<div class="diagram-label">✏️ DIAGRAM 03 — 5S Shadow Board</div>
+<small>यहाँ औजारों की छाया/आकार वाले बोर्ड का चित्र लगाएँ।</small>
+<label class="upload-btn">📷 चित्र चुनें<input type="file" accept="image/*" onchange="previewDiagram(this)"></label>
+</div>
+
+<div class="memory">🧠 क्रम याद रखें: Sort → Set in Order → Shine → Standardize → Sustain</div>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+<div class="question">
+<b>Q1. 5S में Seiri का अर्थ क्या है?</b>
+<div class="options">
+<span>A. सफाई</span><span>B. छाँटना</span><span>C. अनुशासन</span><span>D. मानकीकरण</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — छाँटना (Sort)।</div>
+</div>
+<div class="question">
+<b>Q2. 5S में Sustain किससे संबंधित है?</b>
+<div class="options">
+<span>A. स्व-अनुशासन</span><span>B. धातु काटना</span><span>C. बिजली मापना</span><span>D. वेल्डिंग</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — स्व-अनुशासन।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 6 -->
+<section>
+<h2>6. सुरक्षा संकेत — आकार और रंग</h2>
+<p class="english">Safety Signs & Colour Codes</p>
+
+<div class="two-col">
+<div class="mini-card">
+<h3 style="color:#d52d3c">A. निषेधात्मक</h3>
+<p><b>आकार:</b> वृत्ताकार</p>
+<p><b>रंग:</b> सफेद पृष्ठभूमि, लाल बॉर्डर/तिरछी पट्टी</p>
+<p><b>उदाहरण:</b> No Smoking</p>
+</div>
+
+<div class="mini-card">
+<h3 style="color:#2464ce">B. अनिवार्य</h3>
+<p><b>आकार:</b> वृत्ताकार</p>
+<p><b>रंग:</b> नीली पृष्ठभूमि, सफेद चिन्ह</p>
+<p><b>उदाहरण:</b> हेलमेट पहनें</p>
+</div>
+
+<div class="mini-card">
+<h3 style="color:#c38a00">C. चेतावनी</h3>
+<p><b>आकार:</b> त्रिकोणीय</p>
+<p><b>रंग:</b> पीली पृष्ठभूमि, काला चिन्ह</p>
+<p><b>उदाहरण:</b> विद्युत खतरा</p>
+</div>
+
+<div class="mini-card">
+<h3 style="color:#14834e">D. सुरक्षित स्थिति / सूचना</h3>
+<p><b>आकार:</b> वर्गाकार या आयताकार</p>
+<p><b>रंग:</b> हरा और सफेद</p>
+<p><b>उदाहरण:</b> Emergency Exit</p>
+</div>
+</div>
+
+<div class="diagram">
+<div class="diagram-label">✏️ DIAGRAM 04 — Safety Signs</div>
+<small>यहाँ निषेधात्मक, अनिवार्य, चेतावनी और सुरक्षित निकास संकेतों का चार्ट लगाएँ।</small>
+<label class="upload-btn">📷 चित्र चुनें<input type="file" accept="image/*" onchange="previewDiagram(this)"></label>
+</div>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+<div class="question">
+<b>Q1. चेतावनी संकेत का सामान्य आकार क्या होता है?</b>
+<div class="options">
+<span>A. वृत्त</span><span>B. त्रिकोण</span><span>C. अंडाकार</span><span>D. कोई आकार नहीं</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — त्रिकोण।</div>
+</div>
+<div class="question">
+<b>Q2. अनिवार्य सुरक्षा संकेत में सामान्यतः कौन-सा रंग होता है?</b>
+<div class="options">
+<span>A. नीला</span><span>B. पीला</span><span>C. लाल</span><span>D. नारंगी</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — नीला।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 7 -->
+<section>
+<h2>7. व्यक्तिगत सुरक्षा उपकरण — PPE</h2>
+<p class="english">Personal Protective Equipment</p>
+
+<table>
+<thead><tr><th>PPE</th><th>उपकरण</th><th>सुरक्षा</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>हेलमेट</td><td>सिर</td></tr>
+<tr><td>2</td><td>सेफ्टी शूज</td><td>पैर</td></tr>
+<tr><td>3</td><td>रेस्पिरेटरी मास्क</td><td>धूल/हानिकारक कण</td></tr>
+<tr><td>4</td><td>दस्ताने</td><td>हाथ और बाँह</td></tr>
+<tr><td>5</td><td>गॉगल्स/फेस शील्ड</td><td>आँख और चेहरा</td></tr>
+<tr><td>6</td><td>एप्रन/सुरक्षात्मक कपड़े</td><td>शरीर</td></tr>
+<tr><td>7</td><td>ईयर प्लग/ईयर मफ</td><td>कान</td></tr>
+<tr><td>8</td><td>फुल बॉडी हार्नेस</td><td>ऊँचाई पर गिरने से सुरक्षा</td></tr>
+</tbody>
+</table>
+
+<div class="note warning">
+<strong>इलेक्ट्रीशियन के लिए:</strong> विद्युत कार्य में केवल उस वोल्टेज और जोखिम के लिए रेटेड, जाँचे हुए इंसुलेटेड PPE का उपयोग करें। सामान्य दस्ताने विद्युत सुरक्षा दस्ताने का विकल्प नहीं हैं।
+</div>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+<div class="question">
+<b>Q1. अत्यधिक शोर से कानों की सुरक्षा के लिए क्या उपयोग किया जाता है?</b>
+<div class="options">
+<span>A. फेस शील्ड</span><span>B. ईयर प्लग</span><span>C. हेलमेट</span><span>D. एप्रन</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — ईयर प्लग।</div>
+</div>
+<div class="question">
+<b>Q2. ऊँचाई पर काम करते समय गिरने से सुरक्षा के लिए क्या उपयोग किया जाता है?</b>
+<div class="options">
+<span>A. फुल बॉडी हार्नेस</span><span>B. नियोन टेस्टर</span><span>C. स्टील रूल</span><span>D. हथौड़ा</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — फुल बॉडी हार्नेस।</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 8 -->
+<section>
+<h2>8. अपशिष्ट निपटान</h2>
+<p class="english">Waste Disposal Methods</p>
+
+<table>
+<thead><tr><th>विधि</th><th>अर्थ</th><th>उदाहरण</th></tr></thead>
+<tbody>
+<tr><td>Recycling</td><td>पुनर्चक्रण</td><td>तांबा, एल्युमिनियम, उपयुक्त प्लास्टिक</td></tr>
+<tr><td>Composting</td><td>जैविक खाद बनाना</td><td>खाने का जैविक कचरा, पत्तियाँ</td></tr>
+<tr><td>Incineration</td><td>नियंत्रित उच्च ताप पर जलाना</td><td>विशिष्ट अनुमोदित कचरा</td></tr>
+<tr><td>Landfill</td><td>स्वीकृत स्थल पर भूमि भराव</td><td>अन्य गैर-पुनर्चक्रण योग्य कचरा</td></tr>
+</tbody>
+</table>
+
+<div class="note warning">
+बैटरी का अम्ल, इलेक्ट्रॉनिक कचरा, तेल और रसायन सामान्य कूड़े में न डालें। इनके लिए निर्धारित सुरक्षित संग्रह और निपटान प्रक्रिया अपनाएँ।
+</div>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+<div class="question">
+<b>Q1. तांबे के स्क्रैप को पुनः उपयोग योग्य बनाने की प्रक्रिया क्या कहलाती है?</b>
+<div class="options">
+<span>A. Landfill</span><span>B. Recycling</span><span>C. Composting</span><span>D. Burning</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — Recycling।</div>
+</div>
+</div>
+</section>
+
+<!-- HAND TOOLS -->
+<section>
+<h2>9. सामान्य औजार — Hand Tools</h2>
+<p class="english">Electrician Trade Tools</p>
+
+<h3>1. कॉम्बिनेशन प्लायर (Combination Pliers)</h3>
+<ul>
+<li><strong>कार्य:</strong> तार काटना, पकड़ना और मोड़ना।</li>
+<li><strong>मुख्य भाग:</strong> Cutting Jaw, Flat Grip और Pipe Grip।</li>
+<li><strong>सामान्य आकार:</strong> 150 mm और 200 mm।</li>
+<li><strong>सावधानी:</strong> इसे हथौड़े की तरह न प्रयोग करें। विद्युत कार्य से पहले सप्लाई अलग करें; सामान्य प्लायर लाइव लाइन पर काम करने का विकल्प नहीं है।</li>
+</ul>
+
+<h3>2. स्क्रू ड्राइवर (Screwdriver)</h3>
+<ul>
+<li><strong>भाग:</strong> Blade/Shank, Tip और Handle।</li>
+<li><strong>प्रकार:</strong> Flat Tip और Phillips/Cross Tip।</li>
+<li><strong>सावधानी:</strong> स्क्रू ड्राइवर को छेनी की तरह न प्रयोग करें।</li>
+</ul>
+
+<h3>3. हथौड़े (Hammers)</h3>
+<table>
+<thead><tr><th>प्रकार</th><th>पहचान/कार्य</th></tr></thead>
+<tbody>
+<tr><td>Ball Peen Hammer</td><td>एक सिरा सपाट, दूसरा गोल; धातु कार्य और रिवेटिंग।</td></tr>
+<tr><td>Claw Hammer</td><td>लकड़ी से कील निकालने में उपयोग।</td></tr>
+<tr><td>Mallet</td><td>लकड़ी/रबर/नायलॉन का सिर; सतह को कम नुकसान पहुँचाने वाले कार्य।</td></tr>
+</tbody>
+</table>
+
+<h3>4. पोकर / ब्रैडॉल (Poker / Bradawl)</h3>
+<p>लकड़ी के बोर्ड पर स्क्रू लगाने से पहले छोटा गाइड होल बनाने में उपयोग। सामान्य पाठ्यपुस्तक आकार लगभग 150 mm दिया जा सकता है।</p>
+
+<h3>5. इलेक्ट्रीशियन नाइफ (Electrician's Knife)</h3>
+<p>केबल का इंसुलेशन हटाने में उपयोग। कंडक्टर को काटने या खरोंचने से बचाएँ। विद्युत सप्लाई अलग करके ही कार्य करें।</p>
+
+<h3>6. हैक्सॉ (Hacksaw)</h3>
+<ul>
+<li><strong>भाग:</strong> Frame, Blade और Wing Nut।</li>
+<li><strong>सामान्य लंबाई:</strong> 250 mm या 300 mm।</li>
+<li><strong>Pitch:</strong> ब्लेड के दाँतों के बीच की दूरी/दाँतों की व्यवस्था से संबंधित माप।</li>
+<li><strong>दाँत:</strong> सामान्य हैक्सॉ ब्लेड को इस प्रकार लगाया जाता है कि कटिंग स्ट्रोक आगे की ओर हो।</li>
+</ul>
+
+<div class="diagram">
+<div class="diagram-label">✏️ DIAGRAM 05 — Hacksaw के भाग</div>
+<small>यहाँ Frame, Blade, Handle और Wing Nut का लेबलयुक्त चित्र लगाएँ।</small>
+<label class="upload-btn">📷 चित्र चुनें<input type="file" accept="image/*" onchange="previewDiagram(this)"></label>
+</div>
+
+<h3>7. वायर स्ट्रिपर (Wire Stripper)</h3>
+<p>तार के कंडक्टर को नुकसान पहुँचाए बिना इंसुलेशन हटाने के लिए। कुछ प्रकारों में अलग-अलग वायर गेज के खाँचे होते हैं।</p>
+
+<h3>8. सेंटर पंच (Center Punch)</h3>
+<ul>
+<li>धातु पर ड्रिलिंग से पहले केंद्र का निशान बनाने में उपयोग।</li>
+<li>पारंपरिक पाठ्यपुस्तक मानक: Center Punch का Point Angle लगभग <strong>90°</strong>।</li>
+<li>Prick Punch का कोण पाठ्यपुस्तक के अनुसार 30° या 60° दिया जा सकता है।</li>
+</ul>
+
+<h3>9. स्टील रूल, ट्राई स्क्वायर और नियोन टेस्टर</h3>
+<table>
+<thead><tr><th>औजार</th><th>कार्य/मुख्य जानकारी</th></tr></thead>
+<tbody>
+<tr><td>Steel Rule</td><td>लंबाई मापने के लिए; सामान्य आकार 150 mm या 300 mm।</td></tr>
+<tr><td>Try Square</td><td>90° कोण की जाँच करने के लिए।</td></tr>
+<tr><td>Neon Tester</td><td>फेज़ की उपस्थिति जाँचने के लिए; दिए गए उपकरण की रेटिंग का पालन करें।</td></tr>
+</tbody>
+</table>
+
+<div class="diagram">
+<div class="diagram-label">✏️ DIAGRAM 06 — प्रमुख Electrician Hand Tools</div>
+<small>यहाँ प्लायर, स्क्रू ड्राइवर, सेंटर पंच, ट्राई स्क्वायर और नियोन टेस्टर का लेबलयुक्त चार्ट लगाएँ।</small>
+<label class="upload-btn">📷 चित्र चुनें<input type="file" accept="image/*" onchange="previewDiagram(this)"></label>
+</div>
+
+<h3>औजारों की त्वरित समीक्षा</h3>
+<table>
+<thead><tr><th>औजार</th><th>याद रखने योग्य तथ्य</th></tr></thead>
+<tbody>
+<tr><td>Combination Pliers</td><td>काटना, पकड़ना, मोड़ना; सामान्य आकार 150/200 mm।</td></tr>
+<tr><td>Ball Peen Hammer</td><td>धातु कार्य; पाठ्यपुस्तक में 250 g सामान्य उदाहरण।</td></tr>
+<tr><td>Mallet</td><td>लकड़ी/रबर/नायलॉन का सिर।</td></tr>
+<tr><td>Center Punch</td><td>केंद्र का निशान; सामान्य पाठ्यपुस्तक मान 90°।</td></tr>
+<tr><td>Try Square</td><td>90° कोण की जाँच।</td></tr>
+<tr><td>Neon Tester</td><td>फेज़ की उपस्थिति जाँचने के लिए; सही रेटिंग और सुरक्षित प्रक्रिया आवश्यक।</td></tr>
+</tbody>
+</table>
+
+<div class="exam">
+<div class="exam-title">🚆 ALP Practice Questions</div>
+
+<div class="question">
+<b>Q1. Combination Pliers का मुख्य उपयोग क्या है?</b>
+<div class="options">
+<span>A. केवल मापना</span><span>B. काटना, पकड़ना और मोड़ना</span>
+<span>C. छेद करना</span><span>D. तापमान मापना</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: B — काटना, पकड़ना और मोड़ना।</div>
+</div>
+
+<div class="question">
+<b>Q2. स्क्रू ड्राइवर का सही उपयोग क्या है?</b>
+<div class="options">
+<span>A. स्क्रू कसना/ढीला करना</span><span>B. हथौड़े का विकल्प</span>
+<span>C. धातु काटना</span><span>D. लंबाई मापना</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — स्क्रू कसना या ढीला करना।</div>
+</div>
+
+<div class="question">
+<b>Q3. सेंटर पंच का उपयोग किसलिए किया जाता है?</b>
+<div class="options">
+<span>A. ड्रिलिंग से पहले केंद्र का निशान</span><span>B. तार की लंबाई मापना</span>
+<span>C. स्क्रू खोलना</span><span>D. बिजली का वोल्टेज मापना</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — ड्रिलिंग से पहले केंद्र का निशान।</div>
+</div>
+
+<div class="question">
+<b>Q4. Try Square किस कोण की जाँच करता है?</b>
+<div class="options">
+<span>A. 30°</span><span>B. 45°</span><span>C. 90°</span><span>D. 180°</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: C — 90°।</div>
+</div>
+
+<div class="question">
+<b>Q5. हैक्सॉ ब्लेड किस कार्य के लिए उपयोग किया जाता है?</b>
+<div class="options">
+<span>A. धातु काटना</span><span>B. वोल्टेज मापना</span>
+<span>C. तापमान मापना</span><span>D. स्क्रू कसना</span>
+</div>
+<button class="reveal" onclick="showAnswer(this)">उत्तर देखें</button>
+<div class="answer" hidden>उत्तर: A — धातु काटना।</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>⚡ अंतिम मिनट रिवीजन</h2>
+
+<div class="memory">
+✍ <strong>याद रखने योग्य मुख्य तथ्य</strong>
+<ul>
+<li>Accident — अनियोजित और अवांछित घटना।</li>
+<li>Electric Shock — सप्लाई अलग करना प्राथमिक कदम।</li>
+<li>Fire Triangle — Fuel + Heat + Oxygen।</li>
+<li>Starving — ईंधन हटाना।</li>
+<li>Smothering — ऑक्सीजन रोकना।</li>
+<li>Cooling — तापमान कम करना।</li>
+<li>5S — Sort, Set in Order, Shine, Standardize, Sustain।</li>
+<li>Warning Sign — सामान्यतः पीला त्रिकोण।</li>
+<li>Mandatory Sign — सामान्यतः नीला वृत्त।</li>
+<li>Try Square — 90° कोण की जाँच।</li>
+<li>Center Punch — केंद्र का निशान।</li>
+</ul>
+</div>
+</section>
+
+<footer class="footer">
+  RAILWAY WARRIOR ✍<br>
+  RRB ALP CBT-2 • PART-B • ELECTRICIAN<br>
+  <small>अभ्यास करें • दोहराएँ • सुरक्षित रहें</small>
+</footer>
+
+</main>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle('dark');
+  const dark=document.body.classList.contains('dark');
+  document.getElementById('themeBtn').textContent=dark?'☀️ White':'🌙 Dark';
+  localStorage.setItem('railwayNotesTheme',dark?'dark':'light');
+}
+
+if(localStorage.getItem('railwayNotesTheme')==='dark'){
+  document.body.classList.add('dark');
+  document.getElementById('themeBtn').textContent='☀️ White';
+}
+
+function showAnswer(button){
+  const answer=button.nextElementSibling;
+  const hidden=answer.hasAttribute('hidden');
+  if(hidden){
+    answer.removeAttribute('hidden');
+    button.textContent='उत्तर छिपाएँ';
+  }else{
+    answer.setAttribute('hidden','');
+    button.textContent='उत्तर देखें';
+  }
+}
+
+/*
+  Diagram Upload:
+  यह बटन चुनी हुई image का browser में preview दिखाता है।
+  यह अपने-आप GitHub पर image upload नहीं करता।
+*/
+function previewDiagram(input){
+  const file=input.files && input.files[0];
+  if(!file)return;
+
+  if(!file.type.startsWith('image/')){
+    alert('कृपया image file चुनें।');
+    return;
+  }
+
+  const reader=new FileReader();
+  reader.onload=function(event){
+    const box=input.closest('.diagram');
+    let img=box.querySelector('img');
+
+    if(!img){
+      img=document.createElement('img');
+      img.alt='Uploaded diagram preview';
+      box.insertBefore(img,box.querySelector('.upload-btn'));
+    }
+
+    img.src=event.target.result;
+  };
+
+  reader.readAsDataURL(file);
+}
+</script>
+
+</body>
+</html>
