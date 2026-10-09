@@ -856,13 +856,16 @@ function renderChapters(list = chapters){
 
         card.onclick = function(){
 
-            alert(
-                "📄 Theory PDF अभी upload नहीं की गई है.\n\n" +
-                "Chapter " + number +
-                " — " + chapter.title
-            );
+if(index === 0){
+    window.location.href = "electrician-ch01.html";
+} else {
+    alert(
+        "📄 इस Chapter की HTML फाइल अभी लिंक नहीं की गई है।\n\n" +
+        "Chapter " + number + " — " + chapter.title
+    );
+}
 
-        };
+};
 
         grid.appendChild(card);
 
